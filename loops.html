@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Greeting</h2>
+<p id="demo"></p>
+
+<script>
+let hour = 14;
+let isWeekend = false;
+let greeting = "";
+
+if(hour < 12){
+    greeting = 'Good morning';
+}else if(hour < 18){
+    greeting = 'Good day';
+}else{
+    greeting = "Good afternoon";
+}
+
+let dayType = (isWeekend) ? 'weekend':'workday'
+document.getElementById('demo').innerHTML = greeting + dayType
+</script>
+
+</body>
+</html>

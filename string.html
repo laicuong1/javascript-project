@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>String Methods</h2>
+<p id="demo"></p>
+
+<script>
+let text = "  JavaScript is fun  ";
+
+let clean = text.trim();
+
+let upper = clean.toUpperCase();
+
+let pos = clean.indexOf("fun");
+
+document.getElementById('demo').innerHTML = `${upper}  position ${pos}`;
+</script>
+
+</body>
+</html>

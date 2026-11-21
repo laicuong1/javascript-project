@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="task" placeholder="nhap vao day">
+    <button onclick="them()">Thêm vào</button>
+    <ul id ="ds"></ul>
+    <button onclick="xoa()">Xóa</button>
+    <button onclick="xoaHet()">Xóa hết</button>
+    <script>
+        let task = [];
+
+        function inRa(){
+            let html = "";
+            for(let i = 0 ; i < task.length ; i++){
+            }
+            document.getElementById('ds').innerHTML = html;
+        }
+
+        function them(){
+            let taskInput = document.getElementById("task");
+            let text = taskInput.value;
+            if(text === null){
+                return;
+            }
+            task.push(text);
+            task.value="";
+            inRa();
+        }
+
+        function xoa(id){
+            task.splice(id,1);
+            inRa();
+        }
+
+        function xoaHet(){
+            task = [];
+            inRa();
+        }
+    </script>
+</body>
+</html>
